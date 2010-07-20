@@ -1,16 +1,53 @@
-body {text-align:center; padding:0; margin:0; color:#353A38; font-size:16px; font-family:arial, sans-serif;}
+body {text-align:center; padding:0; margin:0; color:#010101; font-size:16px; font-family:arial, sans-serif; background-color: #e1e5d8;}
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Molengo', arial, serif;
+	color:#010101;
+	text-decoration: none;
+}
+h4{
+	font-size: 20px;
+	margin-bottom: 12px;
+}
+h4 a {
+  color:#010101;
+  font-weight: normal;
+  text-decoration: none;
+}
+h4 a:hover {
+  text-decoration: underline;
+  color: #ba5800;
+}
+.browse-leaflets {
+  font-size: 0.8em;
+}
+
+.add p {
+  font-size:12px;
+}
+.add-title {
+	font-size: 14px;
+	margin: 10px 0;
+}
+
+
+#page-container {
+	width: 998px;
+	margin: 0 auto;
+	background: url(/images/background.jpg) top;
+}
 /* Page */
-#divPage { text-align:left; position:relative; margin:0 auto;
-    line-height:1.6em; padding:0 5%;border-top:solid 1px #ccc;}
+#divPage { text-align:left; position:relative; margin:0 auto;  width: 998px;}
 #divPage.home {}    
 
 /* Header */
-#divHeader {padding:0; height:135px; border-bottom:solid 10px #353B38;background:url(../images/clouds.png) repeat-x 0 0;
-    position:relative;}
-#divHeader p {font-size:1.3em; font-weight:bold; line-height:1.3em; margin-left:60px; padding-top:15px; margin-top:0px; text-align:left}
-/* #pLogo {position:absolute;position:absolute; top:-5px; left:5%;width:400px; height:107px; } */
-/* #pLogo a {display:block; width:400px; height:130px; background:url(../images/logo.png) no-repeat;;} */
+#divHeader {padding:0; height:116px; border-bottom:solid 3px #ba5800;
+    position:relative; width: 998px; margin:0 auto;}
+#pLogo {position:absolute; top:29px; left:66px;width:400px; height:88px; text-align: left;}
+#pLogo a {color: #010101; text-decoration: none}
+#pLogo h1 {font-size: 26px; color: #010101; margin: 0;}
+#pLogo h2 {font-size: 14px; color: #010101; font-weight: normal; margin: 5px 0; text-transform: uppercase;}
+
 #pStrapLine {position:absolute; top:0; right:2%; font-weight:bold;}
 
 /* Banner */
@@ -19,20 +56,36 @@ body {text-align:center; padding:0; margin:0; color:#353A38; font-size:16px; fon
 #divBanner form {display:inline; position:relative; top:0.4em;}
 
 /* headings */
-h1, h2, h3, h4, h5, h6 {font-weight:bold; color:#8e7345; line-height:1.5em;}
-h1, h2 {color:#1f6e62;}
-h3, h4, h5, h6 {margin:1.2em 0 0.3em 0;}
+
 p.page_count {font-size:0.8em; margin:0;padding:0 0.8em; border-top:solid 1px #ddd; border-bottom:solid 1px #ddd;
         color:#808080;}
-
+p {font-size: 14px; margin:10px 0;}
 
 /* Menu */
-#ulMenu {padding:8px 0.6em 0 0; margin:0; position:absolute; bottom:0; right:0; background:#353B38;}
-#ulMenu li {padding:0 0 7px 0; margin:0; float:left; list-style-type:none;}
-#ulMenu li a {display:block; padding:0 0.6em; font-weight:bold; color:#fff; text-decoration:none;}
-#ulMenu li a:hover {text-decoration:underline;}
+#ulMenu { padding:0; margin:0; position:absolute; bottom:0; right:56px;}
+#ulMenu li {height: 37px; margin:0; float:left; list-style-type:none;}
+#ulMenu li a {display:block; font-weight:lighter; color:#010101; text-decoration:none; padding: 5px 10px; height: 27px; font-family: 'Molengo', arial, serif; text-transform: capitalize;}
+#ulMenu li a.active {background: url(/images/nav_triangle.png) no-repeat bottom center;}
+#ulMenu li a:hover {color:#ba5800}
 
 /* content */
+#divContent h3 {
+	font-size: 44px;
+	font-weight: bold;
+	line-height: 46px;
+	padding: 0;
+	margin: 0;
+}
+#divContent h3.light {
+	font-weight: lighter;
+	margin-bottom: 34px;
+}
+
+div#divContentFull {
+
+}
+.leftcolumn {position:relative; float: left; width: 422px; padding-left: 66px;}
+.rightcolumn {position:relative; float: right; width: 422px; padding-right: 66px;}
 div.contentfull {padding:1em;}
 div.contentleft, div.contentright, div.contentcolleft, div.contentcolright {float:left;}
 div.contentleft {width:49%;padding:0 1% 0 0;}
@@ -56,7 +109,7 @@ div.searchbox input, div.searchbox label {font-size:1.3em; padding-right:1em;}
 #divResults {position:relative;}
 ul.results {padding:0;margin:0;}
 ul.results li {float:left;list-style-type:none;padding:0; margin:0; padding-bottom:1em;
-     font-size:0.8em; padding:0 20px 2em 0; width:160px; overflow:hidden; line-height:1.2em; height:260px;}
+     font-size:0.8em; padding:0 20px 2em 0; width:160px; overflow:hidden; line-height:1.2em; height:160px;}
 ul.results li img {margin-bottom:0.2em;}    
 ul.results li a {display:block; text-align:left; padding-top:0.2em;padding-left:2em;}
 ul.results li a.leaflet {height:180px;padding-right:0;}
@@ -64,24 +117,88 @@ ul.results li a.leaflet {height:180px;padding-right:0;}
 #imgRSS {position:absolute; top:2.4em; right:1.5em;}
 
 /* Home */
-#divWelcome {width:45%; float:left;}
-#divWelcome p {font-size:1.3em; font-weight:bold; line-height:1.3em;}
+#divWelcome {}
+#divWelcome p {}
 #pCount {font-size:1em!important; font-weight:normal;}
-#divFrontLookup {background:#ffffaa; padding:0.3em 0; text-align:center;}
-#divFrontLookup input.button {font-size:1em;}
+#divFrontLookup form {
+	margin-top: 10px;
+}
+#divFrontLookup input.button {font-size:1em; display:block; float:left;}
+#divFrontLookup #txtSearch {display:block; float:left; height:18px; margin-right:10px; width:100px; color:#888;}
+
 
 #smlActivist, #smlPost {font-size:0.7em;}
-#divRecentLeaflets {padding-bottom:2em; position:relative; border-top:solid 2px #ccc; margin-top:1em;}
+#divRecentLeaflets {
+	position: relative;
+	display: block;
+	width: 866px;
+	float: left;
+	background: #fff;
+	padding: 40px 66px;
+}
+
 #divRecentLeaflets ul {padding-top:1.3em;}
 #divRecentLeaflets p {clear:left;}
 #divRecentControls {position:absolute;top:1em; right:0; padding:5px;font-size:0.9em;}
 #divRecentControls p {padding:0;margin:1em 0 0 0; clear:left;}
-
-
+#calltoactions {
+	margin: 20px 0 35px 80px;
+	padding: 20px 15px 20px 30px;
+	background: url(/images/view_add_background_transparent.png);
+	border: 1px solid #c8c6c6;
+}
+#calltoactions h4{
+	padding:0;
+	margin: 0;
+}
+#divRecentLeaflets h4 {
+	display: inline;
+}
+#divRecentLeaflets h4.inactive{
+	font-weight: lighter;
+	color: #cccccc;
+}
 /* calls to action */
-#divAction div {float:left; width:45%; padding-left:5%;}
-#divAction h3 {font-size:1.3em;}
-#divAction a {font-weight:bold;}
+#divAction {
+	padding-top: 15px;
+	clear:both;
+}
+#divAction p {
+	margin: 0;
+}
+#divAction a {
+	color: #010101;
+	text-decoration: none;
+}
+#divAction a:hover {
+	color: #ba5800;
+}
+#divAction h4 {
+	margin-bottom: 10px;
+}
+#divAction h5 {
+	font-weight: lighter;
+	font-size: 16px;
+	margin: 0;
+}
+#divAction div{
+	padding-left: 40px;
+	margin-bottom: 20px;
+}
+#divAction div.upload{
+	background: url(/images/add_leaflet_1_upload.png) left no-repeat;
+}
+#divAction div.email{
+	background: url(/images/add_leaflet_2_email.png) left no-repeat;
+}
+#divAction div.post{
+	background: url(/images/add_leaflet_3_post.png) left no-repeat;
+}
+
+.orange-divider {
+	color:#ba5800;
+}
+
 
 /* Forms */
 form ul {padding:0; margin:0;}
@@ -117,9 +234,12 @@ input[type='submit'] {font-size:1.4em; padding:0.3em;}
 
 /* Footer */
 #divFooter {clear:left; text-align:center; padding-top:0.5em; font-size:0.8em; padding-bottom:1em;
-        border-top:dashed 1px #5c6f7b; margin-top:4em;}
+        border-top:dashed 1px #5c6f7b; margin-top:4em; background: #fff;}
 #divFooter ul {list-style-type:none;padding:0; margin:0;}
-#divFooter ul li {display:inline;}
+#divFooter ul li {display:inline; border-right: 1px solid #ba5800; padding: 0 5px;}
+#divFooter ul li.last {display:inline; border: none}
+#divFooter ul li a {text-transform: uppercase; color: #010101; font-size: 14px; text-decoration: none;}
+#divFooter ul li a:hover {color: #ba5800;}
 
 /* Tag cloud */
 ul.tagcloud {margin:0; padding:0;}
@@ -141,8 +261,12 @@ ul.bullets {list-style-type: square;}
 br.clear {clear:left;}
 
 /* Links */
-a {color:#3e7b9b;}
+a {color:#010101; text-decoration: none;}
 a img {border:none;}
+a:hover {
+  color:#ba5800;
+  text-decoration: underline;
+}
 
 /* Highlight */
 .highlight {background:#ffffaa; padding:0 0.3em;}
@@ -196,7 +320,17 @@ div.attention a {font-weight:bold;}
 #btnPrevious img, #btnNext img {position:absolute; top:35%;}
 
 /* stats */
-div.stats div {float:left;padding-right:30px;}
+div.stats {
+	position: relative;
+	display: block;
+	float: left;
+	width:866px;
+	padding: 0 66px;
+	background: #fff;
+}
+div.stats div {float:left;width:30%;min-height:320px;}
+div.stats div h4 {margin:0;}
+div.stats div ol {padding-left:20px;}
 
 /* Rate */
 #divUserStatus {text-align:right; font-size:0.9em; border-bottom:solid 1px #ccc;}
@@ -258,7 +392,7 @@ div.stats div {float:left;padding-right:30px;}
 {
 	padding: 10px;
 	text-align: center;
-	background-image: url(/images/candy.gif);
+	background-image: url(images/candy.gif);
 }
 
 /* info box */
