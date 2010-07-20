@@ -127,7 +127,7 @@
                 </div>
             {/if}
             <div class="infobox">  
-                <h3>Parties</h3>
+                <h4>Parties</h4>
                 <ul class="parties">
                     {foreach from="$parties" item="party"}
                         <li>
@@ -140,7 +140,7 @@
                 </ul>
             </div>
             <div class="infobox">
-                <h3>Categories</h3>
+                <h4>Categories</h4>
                 <ul>
                     {foreach from="$categories" item="category"}
                         <li>

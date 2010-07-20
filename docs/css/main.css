@@ -5,6 +5,25 @@ h1, h2, h3, h4, h5, h6 {
 	color:#010101;
 	text-decoration: none;
 }
+h1 {
+	font-size: 26px;
+	color: #010101;
+	margin: 0;
+}
+h2 {
+	font-size: 14px;
+	color: #010101;
+	font-weight: normal;
+	margin: 5px 0;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 44px;
+	font-weight: bold;
+	line-height: 46px;
+	padding: 0;
+	margin: 0;
+}
 h4{
 	font-size: 20px;
 	margin-bottom: 12px;
@@ -36,17 +55,25 @@ h4 a:hover {
 	margin: 0 auto;
 	background: url(/images/background.jpg) top;
 }
+#page-container.full-width {
+    width:100%;
+    margin:0;
+}
 /* Page */
 #divPage { text-align:left; position:relative; margin:0 auto;  width: 998px;}
-#divPage.home {}    
+#divPage.full-width {
+    width:100%;
+    margin:0;
+}    
 
 /* Header */
 #divHeader {padding:0; height:116px; border-bottom:solid 3px #ba5800;
     position:relative; width: 998px; margin:0 auto;}
-#pLogo {position:absolute; top:29px; left:66px;width:400px; height:88px; text-align: left;}
+#pLogo {position:absolute; top:15px; left:66px;width:400px; height:88px; text-align: left;}
 #pLogo a {color: #010101; text-decoration: none}
 #pLogo h1 {font-size: 26px; color: #010101; margin: 0;}
 #pLogo h2 {font-size: 14px; color: #010101; font-weight: normal; margin: 5px 0; text-transform: uppercase;}
+#pLogo h2 a:hover {color: #ba5800;}
 
 #pStrapLine {position:absolute; top:0; right:2%; font-weight:bold;}
 
@@ -86,12 +113,15 @@ div#divContentFull {
 }
 .leftcolumn {position:relative; float: left; width: 422px; padding-left: 66px;}
 .rightcolumn {position:relative; float: right; width: 422px; padding-right: 66px;}
-div.contentfull {padding:1em;}
+div.contentfull {
+    padding:16px 36px;
+    text-align:center;
+}
 div.contentleft, div.contentright, div.contentcolleft, div.contentcolright {float:left;}
 div.contentleft {width:49%;padding:0 1% 0 0;}
 div.contentright {width:49%;padding:0 0 0 1%;}
-div.contentcolleft {width:74%;padding:0 1% 0 0;}
-div.contentcolright {width:24%;padding:0 0 0 1%;}
+div.contentcolleft {width:73%;padding:0 1%;}
+div.contentcolright {width:23%;padding:0 1%;}
 div.bordertop {border-top:dashed 1px #5c6f7b;}
 div.section {padding-top:2em; margin-top:2em;border-top:solid 1px #808080;}
 
@@ -211,6 +241,9 @@ form.formhighlight {background:#ffffaa; padding:10px;}
 
 /* Uploading images */
 #divUploading {text-align:center; padding:3em 0; display:none;}
+#frmUpload{
+    margin-bottom:20px;
+}
 
 /* Warnings, messages & errors*/
 #divWarning, #divMessages {font-size:0.9em;text-align:center; margin-bottom:1em; margin-top:1em;}
@@ -227,14 +260,13 @@ small.error {background:#ff6f75;}
 #divSpotMap {width:80%; height:200px; border:solid 1px #808080; position:relative;margin-bottom:10em;}
 #divSpotMap div.gmnoprint {bottom:-10px!important;left:4em!important;-moz-opacity:0.8; opacity:0.8;}
 #divSpotMap div a {position:absolute;bottom:-34px!important;right:0;color:#808080!important;}
-#divSpotMap div span {position:absolute;bottom:-34px!important;right:6.5em;color:#808080!important;}
+#divSpotMap div span {position:absolute;bottom:-60px!important;left:-215px;color:#808080!important;}
 
 /* Forms */
 input[type='submit'] {font-size:1.4em; padding:0.3em;}
 
 /* Footer */
-#divFooter {clear:left; text-align:center; padding-top:0.5em; font-size:0.8em; padding-bottom:1em;
-        border-top:dashed 1px #5c6f7b; margin-top:4em; background: #fff;}
+#divFooter {clear:left; text-align:center; padding-top:0.5em; font-size:0.8em; padding-bottom:1em; border-top:3px solid #BA5800; margin-top:4em; background: #fff;}
 #divFooter ul {list-style-type:none;padding:0; margin:0;}
 #divFooter ul li {display:inline; border-right: 1px solid #ba5800; padding: 0 5px;}
 #divFooter ul li.last {display:inline; border: none}
@@ -253,6 +285,9 @@ ul.tagcloud li.tg6 {font-size:1.4em;}
 
 /* Lists */
 ul {padding:0; margin:0;list-style-type:none;}
+ul li {
+    margin-bottom:10px;
+}
 ul.inline li {display:inline; padding:0;}
 ul li.more {padding-top:1em;}
 ul.bullets {list-style-type: square;}
@@ -392,20 +427,26 @@ div.stats div ol {padding-left:20px;}
 {
 	padding: 10px;
 	text-align: center;
-	background-image: url(images/candy.gif);
+	background-image: url(/images/candy.gif);
 }
 
 /* info box */
-div.infobox {background:#f8f8f8; padding:10px; font-size:0.8em; margin-bottom:1em; line-height:1.2em;
-    min-height:50px;}
+div.infobox {
+    background:#f8f8f8;
+    padding:10px;
+    font-size:0.8em;
+    margin-bottom:1em;
+    border: 1px solid #C8C6C6;
+    background: url("/images/view_add_background_transparent.png") repeat scroll 0 0 transparent;
+}
+div.infobox h4 {margin-top:0;}
 div.infobox textarea{width:100%;}
-div.infobox p, div.infobox h3 {color:#333; line-height:1.2em; padding:0 0 1em 0;margin:0;}
 div.infobox img {vertical-align:top; float:left; margin:0 4px 4px 0;}
 
 /* Pagination  */
 ul.pagination {margin:1em auto 2em  auto!important; clear:left; text-align:center;}
 ul.pagination li {display:inline;}
-ul.pagination li a {border:solid 1px #bdd8ec;padding:2px 7px;text-align:center;margin:0 2px; text-decoration:none!important;}
+ul.pagination li a {border:solid 1px #ba5800;padding:2px 7px;text-align:center;margin:0 2px; text-decoration:none!important;}
 ul.pagination li span {padding:2px 7px;text-align:center;margin:0 2px;}
 ul.pagination li.current {font-weight:bold; border:none; text-decoration:none!important;}
 ul.pagination li.previous a, #divPagination ul li.next a {border:none;}

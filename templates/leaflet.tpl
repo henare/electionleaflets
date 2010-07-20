@@ -1,7 +1,7 @@
 {include file="header.tpl"}
 
-    <div class="contentleft">
-        <h1>{$leaflet->title}</h1>
+    <div class="leftcolumn">
+        <h4>{$leaflet->title}</h4>
         <div>{$leaflet->description|nl2br}</div>
         <p>Published by <a href="{$www_server}/parties/{$leaflet->party_url_id}/">{$leaflet->party_name}</a></p>
         <p>
@@ -58,7 +58,7 @@
     </div>
     <br class="clear"/>
     <div id="divReportAbuse" class="contentfull bordertop">
-        <h3>Something wrong with this page?</h3>
+        <h4>Something wrong with this page?</h4>
         <p>
             If someone has uploaded something other than an election leaflet <a href="{$www_server}/report?q={$leaflet->leaflet_id}"> please report it here</a>.
         </p>

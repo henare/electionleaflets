@@ -45,6 +45,7 @@
 
             {if $hide_logo == false}
 	      <div id="pLogo">
+		<h2><a href="{$www_server}">OpenAustralia Foundation Presents</h2>
                 <h1><a href="{$www_server}">{$site_name}</a></h1>
                 <h2><a href="{$www_server}">2010 FEDERAL ELECTION Live <span>|</span> election monitoring</a></h2>
 	      </div>
@@ -52,7 +53,7 @@
         
             <ul id="ulMenu">
               <li>
-                  <a class="active" href="{$www_server}">
+                  <a href="{$www_server}">
                       Home
                   </a>
               </li>
