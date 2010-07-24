@@ -1,8 +1,8 @@
 {include file="header.tpl"}
 
     <div class="contentleft">
-        <h1>{$leaflet->title}</h1>
-        <div>{$leaflet->description|nl2br}</div>
+        <h1>{$leaflet->title|stripslashes}</h1>
+        <div>{$leaflet->description|nl2br|stripslashes}</div>
         <p>Published by <a href="{$www_server}/parties/{$leaflet->party_url_id}/">{$leaflet->party_name}</a></p>
         <p>
             Delivered {if $constituency}in <a href="{$www_server}/{$area_names}/{$constituency->url_id}/">{$constituency->name}</a> {/if}on {$leaflet->date_delivered|date_format:"%A, %e %B, %Y"} (approximate). Uploaded on {$leaflet->date_uploaded|date_format:"%A, %e %B, %Y"} at {$leaflet->date_uploaded|date_format:"%H:%M"}.
