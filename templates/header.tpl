@@ -47,7 +47,7 @@
            <p class="credit">The <a href="http://www.openaustraliafoundation.org.au">OpenAustralia Foundation</a> presents:</p>
 	      <div id="pLogo">
                 <h1><a href="{$www_server}">{$site_name}</a></h1>
-                <h2><a href="{$www_server}"><strong>2010</strong> FEDERAL ELECTION Live <span>|</span> live election monitoring</a></h2>
+                <h2><a href="{$www_server}"><strong>2010</strong> FEDERAL ELECTION <span>|</span> live election monitoring</a></h2>
 	      </div>
             {/if}
         
