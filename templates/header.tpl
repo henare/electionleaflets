@@ -44,7 +44,7 @@
 	  <div id="divHeader"{if $hide_logo == true} class="small"{/if}>
 
             {if $hide_logo == false}
-           <p class="credit">Another fine <a href="{$www_server}">OpenAustralia</a> project</p>
+           <p class="credit">The <a href="http://www.openaustraliafoundation.org.au">OpenAustralia Foundation</a> presents:</p>
 	      <div id="pLogo">
                 <h1><a href="{$www_server}">{$site_name}</a></h1>
                 <h2><a href="{$www_server}"><strong>2010</strong> FEDERAL ELECTION Live <span>|</span> live election monitoring</a></h2>
