@@ -1,6 +1,6 @@
 {include file="header.tpl"}
 
-    <div class="contentfull">
+    <div class="contentfull about-us">
         <h1>About {$site_name}</h1>
         <p>
             Electioneering is a high-stakes game. We, at {$site_name}, believe that it’s time for that game to become a spectator sport.
@@ -41,7 +41,7 @@
             If you love what we do <a href="http://blog.openaustralia.org/join-us/">consider donating</a> to the OpenAustralia Foundation.
         </p>
         <br class="clear"/>
-        <h3>FAQs</h3>
+        <h4>FAQs</h4>
         <dl class="faq">
             <dt>How do I upload an election leaflet</dt>
             <dd>You need to upload a photograph of the leaflet in JPG format, then enter a few details about the leaflet. <a href="{$www_server}/addupload">Click here to get started</a>.</dd>
@@ -64,7 +64,7 @@
                 their <a href="http://www.nla.gov.au/collect/elections.html">election material archive</a>.
             </dd>
         </dl>
-        <h3 id="contact">Contact</h3>
+        <h4 id="contact">Contact</h4>
         <p>
             You can get in touch with us via email <a href="mailto:contact@electionleaflets.org.au">contact@electionleaflets.org.au</a>, say hello on <a href="http://twitter.com/electionleaflet">twitter</a> or phone Matthew on 0424 563 655.
         </p>

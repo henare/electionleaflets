@@ -3,8 +3,8 @@
 <div id="divContentFull">
     <div class="leftcolumn">
     <div id="divWelcome">
-    	<h3>Headline here:</h3>
-    	<h3 class="light">keeping them honest</h3>
+    	<h3>Make a difference</h3>
+    	<h3 class="light">before you vote</h3>
         <p>
             Election leaflets are one of the main weapons in the fight 
 for votes in Australia.
@@ -13,7 +13,7 @@ for votes in Australia.
             They are targeted, effective and sometimes very bitter. 
         </p>
         <p>
-            We need your help to photograph and map them so we can keep 
+            We need <strong>your help</strong> to photograph and map them so we can keep 
 an eye on what the parties are up to, and try to keep them honest.
         </p><br/>
         <p id="pCount">
@@ -23,27 +23,29 @@ an eye on what the parties are up to, and try to keep them honest.
     </div>
     <div class="rightcolumn">
     <div id="calltoactions">
+    <div class="divider"><img class="left" width="110" height="42" src="/images/crease_line_left.png"/><img class="middle" width="75" height="42" src="/images/crease_line_middle.png"/><img class="right" width="75" height="42" src="/images/crease_line_right.png"/></div>
 	    <div id="divFrontLookup">
 			<h4>View leaflets in your area</h4>
-             <form method="get" action="{$www_server}/{$area_names}/">
-                 <input id="txtSearch" name="p" value="Enter postcode" type="text" onfocus="value=''"><input type="image" src="{$www_server}/images/search_button.png" class="button" value="GO" type="submit">                    
-             </form>
+	         <form method="get" action="{$www_server}/{$area_names}/">
+	             <input id="txtSearch" name="p" value="Enter postcode" type="text" onfocus="value=''"><input type="image" src="{$www_server}/images/search_button.png" class="button" value="GO" type="submit">                    
+	         </form>
 	     </div>
-     <div id="divAction">
-     	<h4>Add a leaflet</h4>
-        <div class="add upload">
-            <span class="add-title"><a href="{$www_server}/addupload">Upload them online now</span>
-            <p>(Photograph or scan them first)</a></p>
-        </div>
-        <div class="add email">
-            <span class="add-title"><a href="mailto:{$leaflets_email}">Email them straight from your phone</a></span>
-            <p><a href="mailto:{$leaflets_email}">{$leaflets_email}</a></p>
-        </div>
-        <div class="add post">
-            <span class="add-title">Post them to us via snail mail</span>
-            <p>OpenAustralia, PO Box 1234, Sydney NSW 2000</p>
-        </div>
-     </div>
+	     
+	     <div id="divAction">
+	     	<h4>Add a leaflet</h4>
+	        <div class="add upload" onclick="window.location = '{$www_server}/addupload';">
+	            <span class="add-title"><a href="{$www_server}/addupload">Upload them online now</span>
+	            <p>(Photograph or scan them first)</a></p>
+	        </div>
+	        <div class="add email" onclick="window.location = 'mailto:{$leaflets_email}';">
+	            <span class="add-title"><a href="mailto:{$leaflets_email}">Email them straight from your phone</a></span>
+	            <p><a href="mailto:{$leaflets_email}">{$leaflets_email}</a></p>
+	        </div>
+	        <div class="add post">
+	            <span class="add-title">Post them to us via snail mail</span>
+	            <p>OpenAustralia, PO Box 1234, Sydney NSW 2000</p>
+	        </div>
+	     </div>
      </div>
      </div>
      <br class="clear">
@@ -74,7 +76,7 @@ an eye on what the parties are up to, and try to keep them honest.
             <h4>Top parties</h4>
             <ol>
                 {foreach from="$total_counts" item="party" name="parties"}
-                    <li><a href="{$www_server}/parties/{$party->url_id}/">{$party->name}</a> {$party->count} leaflets</li>
+                    <li><a href="{$www_server}/parties/{$party->url_id}/">{$party->name}</a> <span class="count">({$party->count})</span></li>
                 {/foreach}
             </ol>
         </div>
@@ -82,7 +84,7 @@ an eye on what the parties are up to, and try to keep them honest.
             <h4>Top {$area_names}</h4>
             <ol>
                 {foreach from="$constituency_counts" item="constituency"}
-                    <li><a href="{$www_server}/{$area_names}/{$constituency->url_id}/">{$constituency->name}</a> {$constituency->count} leaflets</li>
+                    <li><a href="{$www_server}/{$area_names}/{$constituency->url_id}/">{$constituency->name}</a> <span class="count">({$constituency->count})</span></li>
                 {/foreach}
             </ol>
         </div>
